@@ -74,20 +74,7 @@ const BookCard = ({ book, onEdit, onDelete }) => {
             </div>
           </div>
 
-          {/* Rating - More Visual Impact */}
-          <div className="flex items-center gap-1.5 mb-8">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star 
-                  key={i} 
-                  className={`w-5 h-5 ${i < 4 ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
-                />
-              ))}
-            </div>
-            <span className="text-sm font-bold text-gray-700 ml-2">4.2</span>
-            <span className="text-xs text-gray-500 ml-1">(128)</span>
-          </div>
-
+        
           {/* Action Buttons - Larger and More Distinct */}
           <div className="flex gap-4 mt-auto">
             <button
