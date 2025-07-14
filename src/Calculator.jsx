@@ -38,13 +38,13 @@ const buttons = [
         <div className="px-5 w-64 py-4 border-2 border-gray-900 rounded-2xl mt-6 bg-amber-200" >{input || 0}</div>
         <div> </div>
         <div className="border-2 border-orange-800 p-5 mt-6 rounded-3xl w-96 grid grid-cols-4">
-            {buttons.map((btn,index) => {
-                return <button 
+            {buttons.map((btn,index) => 
+                 <button 
                 className=" border border-gray-500 rounded-xl px-4 py-3 bg-amber-100 hover:bg-amber-500"
                 onClick={()=>handleInputChange(btn)}
                 > {btn}</button>
                 
-             })}
+             )}
         </div>
 
  
