@@ -15,11 +15,9 @@ function ToDo(){
     if(newTasks.trim()!== ""){
     setTasks(t=> [...t,newTasks]);
     setNewTasks("");
-
     }
-    
-
     }
+
      function deleteTask(index){
      
         const updatedTask = tasks.filter((_,i) => i!== index)
