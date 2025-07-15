@@ -1,0 +1,101 @@
+[
+  {
+    "questions": "what is the largest planet in our solar system?",
+    "answerOptions": [
+      {"text": "jupiter", "isCorrect": true},
+      {"text": "saturn", "isCorrect": false},
+      {"text": "earth", "isCorrect": false},
+      {"text": "neptune", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "what is the capital of france?",
+    "answerOptions": [
+      {"text": "london", "isCorrect": false},
+      {"text": "paris", "isCorrect": true},
+      {"text": "berlin", "isCorrect": false},
+      {"text": "madrid", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "which element has the chemical symbol 'o'?",
+    "answerOptions": [
+      {"text": "oxygen", "isCorrect": true},
+      {"text": "gold", "isCorrect": false},
+      {"text": "silver", "isCorrect": false},
+      {"text": "carbon", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "what is the fastest land animal?",
+    "answerOptions": [
+      {"text": "lion", "isCorrect": false},
+      {"text": "cheetah", "isCorrect": true},
+      {"text": "leopard", "isCorrect": false},
+      {"text": "tiger", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "which ocean is the largest?",
+    "answerOptions": [
+      {"text": "atlantic", "isCorrect": false},
+      {"text": "indian", "isCorrect": false},
+      {"text": "pacific", "isCorrect": true},
+      {"text": "arctic", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "what is 7 x 8?",
+    "answerOptions": [
+      {"text": "54", "isCorrect": false},
+      {"text": "56", "isCorrect": true},
+      {"text": "64", "isCorrect": false},
+      {"text": "48", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "which planet is closest to the sun?",
+    "answerOptions": [
+      {"text": "venus", "isCorrect": false},
+      {"text": "mars", "isCorrect": false},
+      {"text": "mercury", "isCorrect": true},
+      {"text": "earth", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "what is the largest mammal?",
+    "answerOptions": [
+      {"text": "elephant", "isCorrect": false},
+      {"text": "blue whale", "isCorrect": true},
+      {"text": "giraffe", "isCorrect": false},
+      {"text": "hippopotamus", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "which gas do plants absorb from the atmosphere?",
+    "answerOptions": [
+      {"text": "oxygen", "isCorrect": false},
+      {"text": "nitrogen", "isCorrect": false},
+      {"text": "carbon dioxide", "isCorrect": true},
+      {"text": "hydrogen", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "what is the hardest natural substance?",
+    "answerOptions": [
+      {"text": "gold", "isCorrect": false},
+      {"text": "iron", "isCorrect": false},
+      {"text": "diamond", "isCorrect": true},
+      {"text": "silver", "isCorrect": false}
+    ]
+  },
+  {
+    "questions": "which continent is egypt located in?",
+    "answerOptions": [
+      {"text": "asia", "isCorrect": false},
+      {"text": "africa", "isCorrect": true},
+      {"text": "europe", "isCorrect": false},
+      {"text": "south america", "isCorrect": false}
+    ]
+  }
+]
