@@ -1,7 +1,7 @@
 import { useState } from "react";
-import QuestionCard from "./components/QuestionCard";
-import Result from "./components/Results";
-import questions from "./constants/questions.json"
+import QuestionCard from "./quizComponents/QuestionCard";
+import Result from "./quizComponents/Results";
+import questions from "./data/questions.json"
 
 function Quiz(){
     const [currentQuestion, setCurrentQuestion] = useState(0);
