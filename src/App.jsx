@@ -7,22 +7,23 @@ import Calculator from './Calculator'
 import { Routes, Route } from 'react-router-dom'
 import Quiz from './Quiz'
 import Home from './Home'
+import New from './New'
+import Navbar from './Navbar'
 
 function App() {
   
-  return (
-   
-      <Routes>
-     
-        <Route path="/todo" element={<ToDo />} />
-        <Route path="/calculator" element={<Calculator />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/" element= { <Home />}/>
-        
-     
-      </Routes>
-  
-  )
+ return (
+  <>
+    {/* <Navbar/>
+    <New/> */}
+    <Routes>
+      <Route path="/todo" element={<ToDo />} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/quiz" element={<Quiz />} />
+      
+    </Routes>
+  </>
+)
 }
 
 export default App;
