@@ -1,25 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
+import useFetch from "./useFetch";
 
-function New(){
-
-   const [blogs, setBlogs] = useState([
-        { id:1, title : "New Website", body : "Body1", author : "Yaksh"},
-        { id:2, title : "New Website2", body : "Body2", author : "Patel"},
-        { id:3, title : "New Website3", body : "Body3", author : "Clark"}
-    ]);
+function New() {
     
- 
-     
+    const {data , isLoading, error } = useFetch('http://localhost:8000/blogs')
 
-    return(
+    return (
         <div>
-            <BlogList exportBlogs={blogs}/>
+            {error && <div> {error} </div>}
+              { isLoading && <div> Loading.... </div>}
+            { data && <BlogList blogs={data} title="All Blogs"  />}
+           
         </div>
-    
-    )
-
+    );
 }
-
 
 export default New;

@@ -9,17 +9,20 @@ import Quiz from './Quiz'
 import Home from './Home'
 import New from './New'
 import Navbar from './Navbar'
+import Create from './Create'
 
 function App() {
   
  return (
   <>
-    {/* <Navbar/>
-    <New/> */}
+    <Navbar/>
+    
     <Routes>
       <Route path="/todo" element={<ToDo />} />
       <Route path="/calculator" element={<Calculator />} />
       <Route path="/quiz" element={<Quiz />} />
+      <Route path="/" element={<New />} />
+      <Route path="/create" element={<Create />} />
       
     </Routes>
   </>

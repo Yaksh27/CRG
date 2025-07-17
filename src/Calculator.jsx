@@ -1,9 +1,5 @@
 import { useState } from "react";
 import { evaluate } from "mathjs";
-
-
-
- 
 function Calculator(){
 
 const buttons = [

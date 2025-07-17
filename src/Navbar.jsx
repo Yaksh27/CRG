@@ -5,6 +5,8 @@ const Navbar = () => {
            <div className="space-x-5">
                <a href="/" className="text-gray-700 hover:text-gray-900 no-underline">Home</a>
                <a href="/ToDo" className="text-gray-700 hover:text-gray-900 no-underline">To-Do </a>
+               <a href="/Create" className="text-gray-700 hover:text-gray-900 no-underline">Create </a>
+
            </div>
        </nav>
    )
