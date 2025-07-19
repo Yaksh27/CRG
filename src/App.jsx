@@ -10,6 +10,7 @@ import Home from './Home'
 import New from './New'
 import Navbar from './Navbar'
 import Create from './Create'
+import BlogDetails from './BlogDetails'
 
 function App() {
   
@@ -23,6 +24,8 @@ function App() {
       <Route path="/quiz" element={<Quiz />} />
       <Route path="/" element={<New />} />
       <Route path="/create" element={<Create />} />
+       <Route path="/blogs/:id" element={<BlogDetails />} />
+
       
     </Routes>
   </>
