@@ -11,6 +11,8 @@ import New from './New'
 import Navbar from './Navbar'
 import Create from './Create'
 import BlogDetails from './BlogDetails'
+import CountrySearch from './CountrySearch'
+import Animal from './Animal'
 
 function App() {
   
@@ -22,10 +24,11 @@ function App() {
       <Route path="/todo" element={<ToDo />} />
       <Route path="/calculator" element={<Calculator />} />
       <Route path="/quiz" element={<Quiz />} />
-      <Route path="/" element={<New />} />
+      <Route path="/New" element={<New />} />
       <Route path="/create" element={<Create />} />
-       <Route path="/blogs/:id" element={<BlogDetails />} />
-
+      <Route path="/blogs/:id" element={<BlogDetails />} />
+      <Route path="/Country" element={<CountrySearch/>} />
+      <Route path="/" element={<Animal/>} />
       
     </Routes>
   </>
