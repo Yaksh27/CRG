@@ -13,6 +13,7 @@ import Create from './Create'
 import BlogDetails from './BlogDetails'
 import CountrySearch from './CountrySearch'
 import Animal from './Animal'
+import Recipe from './Recipe'
 
 function App() {
   
@@ -28,7 +29,9 @@ function App() {
       <Route path="/create" element={<Create />} />
       <Route path="/blogs/:id" element={<BlogDetails />} />
       <Route path="/Country" element={<CountrySearch/>} />
-      <Route path="/" element={<Animal/>} />
+      <Route path="/Animal" element={<Animal/>} />
+      <Route path="/" element={<Recipe/>} />
+
       
     </Routes>
   </>
