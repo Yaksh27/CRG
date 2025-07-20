@@ -2,24 +2,24 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import ToDo from './ToDo'
-import Calculator from './Calculator'
+import ToDo from './v1/ToDo'
+import Calculator from './v1/Calculator'
 import { Routes, Route } from 'react-router-dom'
-import Quiz from './Quiz'
-import Home from './Home'
-import New from './New'
-import Navbar from './Navbar'
-import Create from './Create'
-import BlogDetails from './BlogDetails'
-import CountrySearch from './CountrySearch'
-import Animal from './Animal'
-import Recipe from './Recipe'
+import Quiz from './v1/Quiz'
+import Home from './v1/Home'
+import New from './v1/New'
+import Navbar from './v1/Navbar'
+import Create from './v1/Create'
+import BlogDetails from './v1/BlogDetails'
+import CountrySearch from './v1/CountrySearch'
+import Animal from './v1/Animal'
+import Recipe from './v1/Recipe'
 
 function App() {
   
  return (
   <>
-    <Navbar/>
+  
     
     <Routes>
       <Route path="/todo" element={<ToDo />} />
@@ -30,7 +30,7 @@ function App() {
       <Route path="/blogs/:id" element={<BlogDetails />} />
       <Route path="/Country" element={<CountrySearch/>} />
       <Route path="/Animal" element={<Animal/>} />
-      <Route path="/" element={<Recipe/>} />
+      <Route path="/Favorites" element={<Recipe/>} />
 
       
     </Routes>
