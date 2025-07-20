@@ -14,6 +14,9 @@ import BlogDetails from './v1/BlogDetails'
 import CountrySearch from './v1/CountrySearch'
 import Animal from './v1/Animal'
 import Recipe from './v1/Recipe'
+import ProductCard from './eCommerce/components/ProductCard'
+import ProductList from './eCommerce/components/ProductList'
+import App2 from './eCommerce/App2'
 
 function App() {
   
@@ -31,6 +34,8 @@ function App() {
       <Route path="/Country" element={<CountrySearch/>} />
       <Route path="/Animal" element={<Animal/>} />
       <Route path="/Favorites" element={<Recipe/>} />
+  
+          <Route path="/" element={<App2/>} />
 
       
     </Routes>

@@ -1,0 +1,48 @@
+Build Order & Focus
+Start Here (Core Foundation)
+
+db.js - Create your product data first
+
+    ProductCard.jsx - Basic product display component
+
+    ProductList.jsx - Map through products and render cards
+
+    App.jsx - Wire up the basic product display
+
+Next Phase (State Management)
+
+    CartContext.jsx - Set up global cart state with useReducer
+
+    useLocalStorage.js - Custom hook for persistence
+
+    Connect Add to Cart - Wire ProductCard to context
+
+Cart Functionality
+
+    CartItem.jsx - Individual cart item with quantity controls
+
+    Cart.jsx - Full cart display (sidebar or modal)
+
+    Header.jsx - Navigation with cart icon and count
+
+Final Polish
+
+    HomePage.jsx - Organize your main product view
+
+    CheckoutPage.jsx - Simple checkout simulation
+
+    index.css - Styling and responsive design
+
+Key Learning Targets :
+
+Since you're working with React hooks:
+
+useReducer for cart state management
+
+useContext for global state sharing
+
+useEffect for local storage sync
+
+useState for component-level state (search, filters)
+
+Custom hooks for reusable logic
