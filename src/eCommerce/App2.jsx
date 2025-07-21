@@ -9,9 +9,7 @@ function App2(){
        
         <div>
               <Header/>
-            <h1 className="text-3xl font-medium  mb-10 mt-10">
-                Checkout Our Latest Products :
-            </h1>
+           
 
                 <ProductList/>
               

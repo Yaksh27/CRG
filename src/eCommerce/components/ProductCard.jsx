@@ -1,14 +1,24 @@
 import { ShoppingCart, Star } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import Modal from './Modal';
+import { useState } from 'react';
 
 function ProductCard({ product }) {
 
     const {addToCart} = useCart();
+    const [showModal, setShowModal] = useState(false)
+ 
 
     const handleAddToCart = () =>{
     if(product.inStock === true){
     addToCart(product);  
-    console.log('Added to cart:', product.name);  
+    console.log('Added to cart:', product.name); 
+    setShowModal(true);
+    
+    setTimeout(()=>{
+        setShowModal(false)
+    }, 3000);
+
     }
     else{
         alert('Sorry! The Product is out of stock.');
@@ -53,6 +63,12 @@ function ProductCard({ product }) {
                     <ShoppingCart size={20} />
                 </button>
             </div>
+            {showModal && (
+                <Modal product={product}/>
+            )
+
+
+            }
         </div>
     )
 }

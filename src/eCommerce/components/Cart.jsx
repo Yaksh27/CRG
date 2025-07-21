@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 function Cart(){
     const { cart, getCartTotal, getCartItemCount, clearCart } = useCart();
     const navigate = useNavigate();
+    
+    
     return(
         <div className="max-w-4xl mx-auto p-6">
             {/* Cart Header */}
@@ -18,13 +20,27 @@ function Cart(){
                         Clear Cart
                     </button>
                 )}
+            
+             
+
             </div>
 
             {/* Cart Content */}
             {cart.length === 0 ? (
+                <div>
+
+              
                 <div className="text-center py-12">
                     <p className="text-gray-500">Your cart is empty</p>
                 </div>
+
+                 <button 
+                       onClick={()=> navigate("/")}
+                       className="  flex gap-4 py-2 px-5 text-purple-400 font-bold bg-yellow-200 rounded-2xl  ">
+                       <StepBack size={25}/> Continue Shopping 
+
+                </button>
+                  </div>
             ) : (
                 <>
                     {/* Cart Items */}
@@ -42,6 +58,7 @@ function Cart(){
                        <StepBack size={25}/> Continue Shopping 
 
                        </button>
+
                         <div className="flex justify-between items-center">
                             <span className="text-xl font-bold">
                                 Total: ${getCartTotal().toFixed(2)}

@@ -4,8 +4,8 @@ function CartItem({item}){
 
     const {removeFromCart, updateQuantity} = useCart();
 
-    const deleteFromCart = (productId) =>{
-        removeFromCart(productId);
+    const deleteFromCart = () =>{
+        removeFromCart(item.id);
     }
 
     const handleUpdateQuantity = (newQuantity ) => {
@@ -35,7 +35,9 @@ function CartItem({item}){
                             <div className="flex flex-col gap-2">
                                 <p className="font-semibold text-gray-900">{item.name}</p>
                                 <p className="text-sm text-gray-600">{item.category}</p>
-                                <button className="bg-red-500 hover:text-gray-700 hover:scale-105  text-sm flex items-center gap-1 px-3 py-1 rounded-xl mt-2 text-white">
+                                <button 
+                                onClick={deleteFromCart}
+                                className="bg-red-500 hover:text-gray-700 hover:scale-105  text-sm flex items-center gap-1 px-3 py-1 rounded-xl mt-2 text-white">
                                     🗑️ Remove
                                 </button>
                             </div>
@@ -49,7 +51,7 @@ function CartItem({item}){
             <div className="flex items-center justify-center gap-3 mt-8">
              
                 <button 
-             
+                    onClick={()=> handleUpdateQuantity(item.quantity -1)}
                     className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold"
                 >
                     -

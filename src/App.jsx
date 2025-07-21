@@ -20,6 +20,7 @@ import App2 from './eCommerce/App2'
 import CartItem from './eCommerce/components/CartItem'
 import { CartProvider } from './eCommerce/context/CartContext'
 import Cart from './eCommerce/components/Cart'
+import Modal from './eCommerce/components/Modal'
 
 function App() {
   
@@ -40,6 +41,7 @@ function App() {
       <Route path="/Favorites" element={<Recipe/>} />
       <Route path="/Cart" element={<Cart/>} />
       <Route path="/" element={<App2/>} />
+      <Route path="/Modal" element={<Modal/>} />
         
       
     </Routes>
