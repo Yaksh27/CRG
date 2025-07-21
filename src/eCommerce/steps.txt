@@ -13,8 +13,6 @@ Next Phase (State Management)
 
     CartContext.jsx - Set up global cart state with useReducer
 
-    useLocalStorage.js - Custom hook for persistence
-
     Connect Add to Cart - Wire ProductCard to context
 
 Cart Functionality

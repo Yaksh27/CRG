@@ -17,13 +17,17 @@ import Recipe from './v1/Recipe'
 import ProductCard from './eCommerce/components/ProductCard'
 import ProductList from './eCommerce/components/ProductList'
 import App2 from './eCommerce/App2'
+import CartItem from './eCommerce/components/CartItem'
+import { CartProvider } from './eCommerce/context/CartContext'
+import Cart from './eCommerce/components/Cart'
 
 function App() {
   
  return (
+       <CartProvider> 
   <>
   
-    
+
     <Routes>
       <Route path="/todo" element={<ToDo />} />
       <Route path="/calculator" element={<Calculator />} />
@@ -34,12 +38,13 @@ function App() {
       <Route path="/Country" element={<CountrySearch/>} />
       <Route path="/Animal" element={<Animal/>} />
       <Route path="/Favorites" element={<Recipe/>} />
-  
-          <Route path="/" element={<App2/>} />
-
+      <Route path="/Cart" element={<Cart/>} />
+      <Route path="/" element={<App2/>} />
+        
       
     </Routes>
   </>
+  </CartProvider>
 )
 }
 
