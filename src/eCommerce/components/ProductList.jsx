@@ -7,9 +7,9 @@ function ProductList() {
 
     const [selectedCategory, showSelectedCategory] = useState('All');
 
-    const filteredProducts = selectedCategory === 'All' ?
-    products : 
-    products.filter(items=>items.category.toLowerCase() === selectedCategory.toLowerCase());
+    const filteredProducts = selectedCategory === 'All' 
+    ?  products 
+    :  products.filter(items=>items.category.toLowerCase() === selectedCategory.toLowerCase());
 
     return(
         <div>

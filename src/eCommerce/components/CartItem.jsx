@@ -60,7 +60,7 @@ function CartItem({item}){
                     {item.quantity}
                 </span>
                 <button 
-                    
+                     onClick={()=> handleUpdateQuantity(item.quantity +1)}
                     className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-gray-700 font-bold"
                 >
                     +

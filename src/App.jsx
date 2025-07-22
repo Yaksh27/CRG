@@ -10,6 +10,7 @@ import Home from './v1/Home'
 import New from './v1/New'
 import Navbar from './v1/Navbar'
 import Create from './v1/Create'
+
 import BlogDetails from './v1/BlogDetails'
 import CountrySearch from './v1/CountrySearch'
 import Animal from './v1/Animal'
@@ -21,6 +22,7 @@ import CartItem from './eCommerce/components/CartItem'
 import { CartProvider } from './eCommerce/context/CartContext'
 import Cart from './eCommerce/components/Cart'
 import Modal from './eCommerce/components/Modal'
+import Practice from './v2/Practice'
 
 function App() {
   
@@ -40,8 +42,10 @@ function App() {
       <Route path="/Animal" element={<Animal/>} />
       <Route path="/Favorites" element={<Recipe/>} />
       <Route path="/Cart" element={<Cart/>} />
-      <Route path="/" element={<App2/>} />
+      <Route path="/App2" element={<App2/>} />
       <Route path="/Modal" element={<Modal/>} />
+      <Route path="/" element={<Practice/>} />
+
         
       
     </Routes>
