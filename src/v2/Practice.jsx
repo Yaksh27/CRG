@@ -1,81 +1,68 @@
 import { useEffect, useState } from "react";
 
-function Practice() {
-  const [users, setUsers] = useState([]);
-  const [filteredUsers, setFilteredUsers] = useState([]);
-  const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(false);
+function Practice(){
+    const [text,setText] = useState("");
+    const [status,setStatus] = useState("");
+    
 
-  // Fetch users on mount
+    useEffect(()=>{
+        const savedDraft = localStorage.getItem("draft")
+        if(savedDraft){
+            setText(savedDraft)
+        }
+    } , []);
+
+   // Auto-save every 3 seconds
   useEffect(() => {
-    setLoading(true);
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((res) => res.json())
-      .then((data) => {
-        setUsers(data);
-        setLoading(false);
-      })
-      .catch(() => setLoading(false));
-  }, []);
+  if (!text) return;
 
-  // Debounced search filtering
-  useEffect(() => {
-    const delay = setTimeout(() => {
-      if (search.trim() === "") {
-        setFilteredUsers([]);
-        return;
-      }
+  const timeout = setTimeout(() => {
+    localStorage.setItem("draft", text);
+    setStatus("Draft Saved");
+    setTimeout(() => setStatus(""), 2000);
+  }, 2000);
 
-      const matches = users.filter((user) =>
-        user.name.toLowerCase().startsWith(search.toLowerCase())
-      );
-      setFilteredUsers(matches);
-    }, 500);
+  return () => clearTimeout(timeout); // cancel previous timer if user types again
+}, [text]);
 
-    return () => clearTimeout(delay); // Cleanup for debounce
-  }, [search, users]);
 
-  //handles search
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
+
+     // Handle publish
+  const handlePublish = () => {
+    setText("");
+    localStorage.removeItem("draft");
+    setStatus("Draft cleared");
+    setTimeout(() => setStatus(""), 2000);
   };
 
-  const handleNameClick = (name) => {
-    setSearch(name);
-    setFilteredUsers([]);
-  };
+    return(
+        <div>
+            <h1 className="text-4xl font-medium"> auto save text editor </h1>
 
-  return (
-    <div className="p-6">
-      <input
-        type="text"
-        placeholder="Search User"
-        className="px-7 py-2 border border-gray-600 rounded-xl bg-gray-100 mt-10"
-        value={search}
-        onChange={handleSearch}
-      />
+            <textarea name="" id=""
+            value={text}
+            rows={8}
+            onChange={(e)=> setText(e.target.value)}
+             className="w-full border rounded p-3 text-gray-700"
+             placeholder="Type ur text....">
 
-      {loading && <p>Loading users...</p>}
+                
+            </textarea>
 
-      {!loading && search.trim() !== "" && filteredUsers.length === 0 && (
-        <p>No users found.</p>
-      )}
 
-      {!loading && filteredUsers.length > 0 && (
-        <ul className="mt-4 space-y-2">
-          {filteredUsers.map((user) => (
-            <li
-              key={user.id}
-              onClick={() => handleNameClick(user.name)}
-              className="cursor-pointer hover:underline"
-            >
-              {user.name}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+            <button 
+            onClick={handlePublish}
+            className="px-6 py-3 bg-blue-300 rounded-xl border border-gray-500 mt-5">
+                Clear
+            </button>
+
+            {status && 
+          <span className="text-green-600 text-sm">{status} </span>
+            
+            }
+        </div>
+    )
+
 }
 
 export default Practice;
